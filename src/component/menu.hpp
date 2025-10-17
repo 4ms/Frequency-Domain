@@ -4,6 +4,8 @@
 #include "rack.hpp"
 
 
+using namespace rack;
+
 struct OptionMenuItem : MenuItem {
 	std::function<bool()> _check;
 	std::function<void()> _set;
