@@ -25,7 +25,8 @@ set(SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../src)
 target_sources(FrequencyDomain
     PRIVATE
 	${SOURCE_DIR}/FrequencyDomain.cpp
-	${SOURCE_DIR}/component/menu.cpp
+    # Don't build this because it's #included in a .cpp file
+	# ${SOURCE_DIR}/component/menu.cpp
 	${SOURCE_DIR}/controller/BallOfConfusion.cpp
 	${SOURCE_DIR}/controller/BoxOfRevelation.cpp
 	${SOURCE_DIR}/controller/DanceThisMeshAround.cpp
