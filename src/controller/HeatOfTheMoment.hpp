@@ -3,7 +3,7 @@
 #include "../model/NoiseGenerator.hpp"
 #include "../model/Oscillator.hpp"
 #include "../model/dsp/Binning.hpp"
-#include "../model/dsp/FFT.hpp"
+#include "../model/dsp/fd_FFT.hpp"
 #include "../model/dsp/WindowFunction.hpp"
 
 

@@ -8,7 +8,7 @@
 #include "../model/Oscillator.hpp"
 #include "../model/OscillatorBank.hpp"
 #include "../model/dsp/Binning.hpp"
-#include "../model/dsp/FFT.hpp"
+#include "../model/dsp/fd_FFT.hpp"
 #include "../model/dsp/WindowFunction.hpp"
 
 using rack::simd::float_4;

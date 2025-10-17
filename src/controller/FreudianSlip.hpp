@@ -5,7 +5,7 @@
 #include "../model/Buffer.hpp"
 #include "../model/OscillatorBank.hpp"
 #include "../model/Cells.hpp"
-#include "../model/dsp/FFT.hpp"
+#include "../model/dsp/fd_FFT.hpp"
 
 #include <cstdint>
 #include <vector>
