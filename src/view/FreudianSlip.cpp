@@ -12,7 +12,11 @@ struct PLAYERItem : MenuItem {
 	FreudianSlipModule *hsm ;
 	void onAction(const event::Action &e) override {
 		
+#if defined(METAMODULE)
+		async_osdialog_file(OSDIALOG_OPEN, nullptr, nullptr, nullptr, [this](char *path) {
+#else
 		char *path = osdialog_file(OSDIALOG_OPEN, NULL, NULL, NULL);        //////////dir.c_str(),
+#endif
 		if (path) {
 			hsm->play = false;
 			hsm->reload = true;
@@ -21,6 +25,9 @@ struct PLAYERItem : MenuItem {
 			hsm->lastPath = std::string(path);
 			free(path);
 		}
+#if defined(METAMODULE)
+			});
+#endif
 	}
 };
 

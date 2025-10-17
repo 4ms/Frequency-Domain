@@ -19,11 +19,18 @@ struct GWDirPLAYERItem : MenuItem {
 	GrainsOfWrathModule *hsm ;
 	void onAction(const event::Action &e) override {
 		
+#if defined(METAMODULE)
+		async_osdialog_file(OSDIALOG_OPEN, nullptr, nullptr, nullptr, [this](char *path) {
+#else
 		char *path = osdialog_file(OSDIALOG_OPEN, NULL, NULL, NULL);        //////////dir.c_str(),
+#endif
 		if (path) {
 			hsm->loadDirectory(path);
 			free(path);
 		}
+#if defined(METAMODULE)
+			});
+#endif
 	}
 };
 
@@ -33,13 +40,20 @@ struct GWPLAYERItem : MenuItem {
   int slot = 0;
 	void onAction(const event::Action &e) override {
 		
+#if defined(METAMODULE)
+		async_osdialog_file(OSDIALOG_OPEN, nullptr, nullptr, nullptr, [this](char *path) {
+#else
 		char *path = osdialog_file(OSDIALOG_OPEN, NULL, NULL, NULL);        //////////dir.c_str(),
+#endif
 		if (path) {
 			hsm->loadSample(slot,path);
 			hsm->samplePosition[slot] = 0;
 			hsm->lastPath[slot] = std::string(path);
 			free(path);
 		}
+#if defined(METAMODULE)
+			});
+#endif
 	}
 
   void step() override {

@@ -9,6 +9,10 @@
 #include <future>
 
 #include "osdialog.h"
+#if defined(METAMODULE)
+#include "filesystem/async_filebrowser.hh"
+#endif
+
 #include "cmath"
 #include <dirent.h>
 #include <algorithm> //----added by Joakim Lindbom

@@ -13,11 +13,18 @@ struct BCDirPLAYERItem : MenuItem {
 	BallOfConfusionModule *hsm ;
 	void onAction(const event::Action &e) override {
 		
+#if defined(METAMODULE)
+		async_osdialog_file(OSDIALOG_OPEN, nullptr, nullptr, nullptr, [this](char *path) {
+#else
 		char *path = osdialog_file(OSDIALOG_OPEN, NULL, NULL, NULL);        //////////dir.c_str(),
+#endif
 		if (path) {
 			hsm->loadDirectory(path);
 			free(path);
 		}
+#if defined(METAMODULE)
+			});
+#endif
 	}
 };
 
@@ -26,11 +33,18 @@ struct BCPLAYERItem : MenuItem {
 	BallOfConfusionModule *hsm ;
   void onAction(const event::Action &e) override {
 		
+#if defined(METAMODULE)
+		async_osdialog_file(OSDIALOG_OPEN, nullptr, nullptr, nullptr, [this](char *path) {
+#else
 		char *path = osdialog_file(OSDIALOG_OPEN, NULL, NULL, NULL);        //////////dir.c_str(),
+#endif
 		if (path) {
 			hsm->loadIndividualWavefile(path);
 			free(path);
 		}
+#if defined(METAMODULE)
+			});
+#endif
 	}
 };
 
@@ -38,11 +52,18 @@ struct BCPLAYERAddItem : MenuItem {
 	BallOfConfusionModule *hsm ;
   void onAction(const event::Action &e) override {
 		
+#if defined(METAMODULE)
+		async_osdialog_file(OSDIALOG_OPEN, nullptr, nullptr, nullptr, [this](char *path) {
+#else
 		char *path = osdialog_file(OSDIALOG_OPEN, NULL, NULL, NULL);        //////////dir.c_str(),
+#endif
 		if (path) {
 			hsm->loadAdditionalWavefile(path);
 			free(path);
 		}
+#if defined(METAMODULE)
+			});
+#endif
 	}
 };
 
