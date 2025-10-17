@@ -473,7 +473,11 @@ void FreudianSlipModule::analyze(){
 
 void FreudianSlipModule::process(const ProcessArgs &args) {
     if((analysisStatus == 0 || lastWindowFunctionId != windowFunctionId) && fileLoaded) {
+#if defined(METAMODULE)
+		// TODO: launch async thread
+#else
         auto handle = std::async(std::launch::async, &FreudianSlipModule::analyze,this);
+#endif
         lastWindowFunctionId = windowFunctionId;
         return;
     }
