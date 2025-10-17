@@ -313,7 +313,7 @@ void GrainsOfWrathModule::clearSamples() {
 void GrainsOfWrathModule::loadDirectory(std::string path) {
   DIR* rep = NULL;
   struct dirent* dirp = NULL;
-  std::string dir = path.empty() ? NULL : system::getDirectory(path);
+  std::string dir = path.empty() ? "" : system::getDirectory(path);
 
   rep = opendir(dir.c_str());
   fichier.clear();

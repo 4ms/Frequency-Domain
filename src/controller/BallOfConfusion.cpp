@@ -203,7 +203,7 @@ float BallOfConfusionModule::paramValue (uint16_t param, uint16_t input, float l
 void BallOfConfusionModule::loadDirectory(std::string path) {
   DIR* rep = NULL;
   struct dirent* dirp = NULL;
-  std::string dir = path.empty() ? NULL : system::getDirectory(path);
+  std::string dir = path.empty() ? "" : system::getDirectory(path);
 
         //fprintf(stderr, "opening directory...%s files \n",dir.c_str());
   loading = true;
@@ -251,7 +251,7 @@ void BallOfConfusionModule::loadDirectory(std::string path) {
 }
 
 void BallOfConfusionModule::loadIndividualWavefile(std::string path) {
-  std::string dir = path.empty() ? NULL : system::getDirectory(path);
+  std::string dir = path.empty() ? "" : system::getDirectory(path);
 
 //fprintf(stderr, "opening individual file...%s \n",path.c_str());
   loading = true;
@@ -273,7 +273,7 @@ void BallOfConfusionModule::loadIndividualWavefile(std::string path) {
 }
 
 void BallOfConfusionModule::loadAdditionalWavefile(std::string path) {
-  std::string dir = path.empty() ? NULL : system::getDirectory(path);
+  std::string dir = path.empty() ? "" : system::getDirectory(path);
 
   loading = true;
   rebuild = true;
