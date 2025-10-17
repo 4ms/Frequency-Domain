@@ -1,0 +1,80 @@
+{
+    "MetaModulePluginMaintainer": "Dan Green",
+    "MetaModulePluginMaintainerEmail": "4ms@4mscompany.com",
+    "MetaModulePluginMaintainerUrl": "https://metamodule.info",
+    "MetaModuleDescription": "Port of Frequency-Domain VCV plugin",
+    "MetaModuleIncludedModules": [
+    {
+      "slug": "BallOfConfusion",
+      "name": "Ball of Confusion",
+      "description": "Spherical Morphing Wavetable Oscillator",
+      "tags": [
+        "Oscillator","Digital","Sampler","Polyphonic"
+      ]
+    },
+    {
+      "slug": "BoxOfRevelation",
+      "name": "Box of Revelation",
+      "description": "3 Dimensional Cube Filter",
+      "tags": [
+        "Filter","Effect"
+      ]
+    },
+    {
+      "slug": "DanceThisMeshAround",
+      "name": "Dance This Mesh Around",
+      "description": "Multi-Dimensional Digital Waveguide Oscillator",
+      "tags": [
+        "Oscillator","Effect","Physical modeling"
+      ]
+    },
+    {
+      "slug": "DelayedReaction",
+      "name": "Delayed Reaction",
+      "description": "Spectral Delay",
+      "tags": [
+        "Delay","Effect"
+      ]
+    },
+    {
+      "slug": "FreudianSlip",
+      "name": "Freudian Slip",
+      "description": "Resynthesizing Sampler",
+      "tags": [
+        "Synth voice","Sampler"
+      ]
+    },
+    {
+      "slug": "GrainsOfWrath",
+      "name": "Grains Of Wrath",
+      "description": "Spewer of Grains of varying dispositions",
+      "tags": [
+        "Granular","Sampler","Effect","Polyphonic"
+      ]
+    },
+    {
+      "slug": "HarmonicConvergence",
+      "name": "Harmonic Convergence",
+      "description": "Resynthesis Engine",
+      "tags": [
+        "Synth voice"
+      ]
+    },
+    {
+      "slug": "HeatOfTheMoment",
+      "name": "Heat Of The Moment",
+      "description": "Impulse Generator",
+      "tags": [
+        "Noise"
+      ]
+    },
+    {
+      "slug": "Morphology",
+      "name": "Morphology",
+      "description": "Spectral Morpher",
+      "tags": [
+        "Vocoder","Effect"
+      ]
+    }    
+    ]
+}
